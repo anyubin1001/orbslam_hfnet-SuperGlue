@@ -1,0 +1,27 @@
+<launch>
+
+    <arg name="mask_image_path" default="$(find omni_vslam)/config/myself_mask.png" />
+    <arg name="yaml_path" default="$(find omni_vslam)/config/hanlanda-right.yaml" />
+    <arg name="visual_trajectory_path" default="$(find omni_vslam)/config/VisualTrajectory.txt" />  
+    <arg name="vocabulary_path" default="$(find omni_vslam)/Vocabulary/myself_hfnet.bin" /> 
+    <arg name="transform_matrix_path" default="$(find omni_vslam)/config/transformation.txt" /> 
+    <arg name="hfnet_model_path" default="$(find omni_vslam)/config/hf_net/myself_hfnetall_with_SuperGlue4_thresh0.001_nms12_1000keys.pb" />          
+    <arg name="SuperGlue_model_path" default="$(find omni_vslam)/config/SuperGlue/myself_SuperGlue_640_480_thresh0.8_outdoor.pt" />  
+
+    <node pkg="omni_vslam" type="omni_vslam_node" name="omni_vslam" output="screen">
+      <param name="~mask_image_path" value="$(arg mask_image_path)"/>
+      <param name="~yaml_path" value="$(arg yaml_path)"/>
+      <param name="~visual_trajectory_path" value="$(arg visual_trajectory_path)"/>
+      <param name="~vocabulary_path" value="$(arg vocabulary_path)"/>
+      <param name="~transform_matrix_path" value="$(arg transform_matrix_path)"/>
+      <param name="~hfnet_model_path" value="$(arg hfnet_model_path)"/>
+      <param name="~SuperGlue_model_path" value="$(arg SuperGlue_model_path)"/>
+
+     <!--is_build_map is used for visual map buildup, only one of the almost same scenario
+        need to delete the map.bin firstly, also need to generate the transform matrix-->
+      <param name="is_buildingup_map" type="bool" value = "true"/>
+      <param name= "display_vslam_result" type="bool" value = "true"/> 
+      <param name="~use_shm" type="bool" value="false"/>
+    </node>
+
+</launch>

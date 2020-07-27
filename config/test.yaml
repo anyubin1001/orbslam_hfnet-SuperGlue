@@ -1,0 +1,25 @@
+%YAML:1.0
+---
+model_type: scaramuzza
+camera_name: ""
+image_width: 0
+image_height: 0
+poly_parameters:
+   p0: 0.
+   p1: 0.
+   p2: 0.
+   p3: 0.
+   p4: 0.
+inv_poly_parameters:
+   p0: 0.
+   p1: 0.
+   p2: 0.
+   p3: 0.
+   p4: 0.
+   p5: 0.
+affine_parameters:
+   ac: 0.
+   ad: 0.
+   ae: 0.
+   cx: 0.
+   cy: 0.

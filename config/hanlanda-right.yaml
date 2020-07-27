@@ -1,0 +1,78 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+# Camera calibration and distortion parameters (OpenCV) 
+model_type: scaramuzza
+camera_name: camera
+image_width: 1280
+image_height: 720
+poly_parameters: 
+  p0: -3.212621e+02
+  p1: 0.000000e+00
+  p2: 9.729243e-04
+  p3: -1.022583e-06
+  p4: 1.592929e-09
+inv_poly_parameters:  
+  p0: 589.698985
+  p1: 425.048084
+  p2: -17.484772
+  p3: 5.875913
+  p4: 79.216597
+  p5: -32.648055
+  p6: -66.903816
+  p7: 131.503150
+  p8: 264.970062
+  p9: 184.807013
+  p10: 60.238114
+  p11: 7.747685
+affine_parameters:
+  ac: 1.000201
+  ad: 0.000179
+  ae: 0.002133
+  cx: 630.918974
+  cy: 366.415850
+
+# Camera frames per second 
+Camera.fps: 20.0
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 0
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 1
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 0.015
+ORBextractor.minThFAST: 0.007
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.1
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 1
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.15
+Viewer.CameraLineWidth: 2
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -10
+Viewer.ViewpointZ: -0.1
+Viewer.ViewpointF: 2000
+
+Map.mapfile: /home/hawk/Documents/trace_data/mapfile/map.bin
+

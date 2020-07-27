@@ -1,0 +1,72 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+model_type: scaramuzza
+camera_name: camera
+image_width: 1280
+image_height: 720
+poly_parameters:
+   p0: -3.147934e+02
+   p1: 0.000000e+00
+   p2: 6.090406e-04
+   p3: 4.124812e-07
+   p4: 9.644497e-11
+inv_poly_parameters:
+   p0: 595.162776
+   p1: 478.170430
+   p2: 99.381760
+   p3: 65.186382
+   p4: 52.017764
+   p5: 15.187739
+   p6: -2.701584
+   p7: -1.378359
+affine_parameters:
+   ac: 0.995456
+   ad: -0.000070
+   ae: 0.001715
+   cx: 638.889130
+   cy: 358.875216
+
+# Camera frames per second 
+Camera.fps: 30.0
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 2800
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.1
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 1
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.15
+Viewer.CameraLineWidth: 2
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -10
+Viewer.ViewpointZ: -0.1
+Viewer.ViewpointF: 2000
+
+Map.mapfile: /home/liu/develop/ORB_SLAM2/map/map.bin
